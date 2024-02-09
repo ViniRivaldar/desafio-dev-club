@@ -12,7 +12,7 @@ const orders = []
 const checkOrderId = (req, res, next) =>{
     const {id} = req.params
 
-    const index = orders.findIndex(user => user.id === id)
+    const index = orders.findIndex(order => order.id === id)
 
     if(index < 0){
         return res.status(404).send("order not found")
